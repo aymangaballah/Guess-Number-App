@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {RFValue} from 'react-native-responsive-fontsize';
-import {COLORS, FONTS, PADDINGS} from '../constants/Constants';
+import {COLORS, FONTS, MARGIN, PADDINGS} from '../constants/Constants';
 
 const TitleText = props => {
   const {title, style} = props;
@@ -22,10 +22,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: PADDINGS.mdPadding,
+    marginVertical: MARGIN.xlMargin,
   },
   text: {
     fontSize: FONTS.h3,
-    fontWeight: 'bold',
     color: COLORS.White,
+    fontFamily:"Cairo-Bold",
   },
 });

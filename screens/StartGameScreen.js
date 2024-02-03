@@ -3,12 +3,12 @@ import React from 'react';
 import {TextInputContainer, TitleText} from '../components';
 import {MARGIN, PADDINGS} from '../constants/Constants';
 
-const StartGameScreen = () => {
+const StartGameScreen = ({pickedNumberHandler}) => {
   return (
     <>
       <View style={styles.Container}>
-        <TitleText title="Guess My Number" style={styles.wrapper} />
-        <TextInputContainer />
+        <TitleText title="Guess My Number"  />
+        <TextInputContainer pickedNumberHandler={pickedNumberHandler} />
       </View>
     </>
   );
@@ -22,9 +22,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: PADDINGS.mdPadding,
     paddingTop: PADDINGS.xlPadding,
     alignItems: 'center',
-    // backgroundColor: '#ccc',
-  },
-  wrapper: {
-    marginVertical: MARGIN.xlMargin,
-  },
+  }
 });

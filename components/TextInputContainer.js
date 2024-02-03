@@ -8,20 +8,38 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import {RFValue} from 'react-native-responsive-fontsize';
-import {FONTS, MARGIN, PADDINGS, RADIUS} from '../constants/Constants';
+import {COLORS, FONTS, MARGIN, PADDINGS, RADIUS} from '../constants/Constants';
 import {Styles} from '../styles/Styles';
 import {Button} from '.';
 
-const TextInputContainer = () => {
+const TextInputContainer = ({pickedNumberHandler}) => {
   const [textInput, setTextInput] = useState('');
   const onChangeText = enteredText => {
     setTextInput(enteredText);
   };
   const onReset = () => {
-    Alert.alert('reset');
+    setTextInput(currentVal => {
+      currentVal = '';
+    });
   };
   const onConfirm = () => {
-    Alert.alert('confrim');
+    const textInputNumber = parseInt(textInput);
+
+    if (textInputNumber > 0 && textInputNumber < 99) {
+      pickedNumberHandler(textInputNumber); // for just change screen
+    } else {
+      Alert.alert(
+        null,
+        'Please Enter a valid Number',
+        [
+          {text: 'Ok', onPress: onReset},
+          {text: 'Cancel', onPress: onReset},
+        ],
+        {
+          cancelable: true,
+        },
+      );
+    }
   };
   return (
     <View style={styles.Container}>
@@ -49,17 +67,17 @@ const styles = StyleSheet.create({
     borderRadius: RADIUS.mdRadius,
     alignItems: 'center',
     padding: PADDINGS.mdPadding,
-    backgroundColor: '#3b021f',
+    backgroundColor: COLORS.Primary500,
   },
   textinputStyle: {
     width: RFValue(40),
     height: RFValue(50),
-    borderBottomColor: '#ddb52f',
+    borderBottomColor: COLORS.Secondry500,
     borderBottomWidth: RFValue(2),
     marginBottom: MARGIN.mdMargin,
     fontSize: FONTS.h4,
-    color: '#ddb52f',
-    textAlign:"center"
+    color: COLORS.Secondry500,
+    textAlign: 'center',
   },
   BtnsWrapper: {
     width: '100%',

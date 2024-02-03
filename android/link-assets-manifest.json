@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Cairo-Bold.ttf",
+      "sha1": "5a7b0543c6c62843900f5d5a049ebc32b5434f5d"
+    },
+    {
+      "path": "assets/fonts/Cairo-Regular.ttf",
+      "sha1": "c40cd69d854d12c818b30c86668a45305b531c5d"
+    }
+  ]
+}

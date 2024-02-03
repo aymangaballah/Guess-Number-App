@@ -1,13 +1,10 @@
 import {RFValue} from 'react-native-responsive-fontsize';
 
 export const COLORS = {
-  BackgroundColor: '#1e085a',
-  AddBtn: '#3e0acc',
-  CancelBtn: '#f31282',
-  TextInput: '#e4d0ff',
-  ColorOFTextinput: '#120438',
-  GoalsColor: '#5e0acc',
-  rippleGoalsColor: '#210444',
+  Primary500: '#3b021f',
+  Primary300: '#640233',
+  Primary200: '#72063c',
+  Secondry500: '#ddb52f',
   White: '#fff',
   black: '#000',
 };

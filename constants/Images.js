@@ -1,2 +1,3 @@
 const backgroundImage = require('../assets/background.jpg');
-export {backgroundImage};
+const GameOverImage = require('../assets/GameOver.png');
+export {backgroundImage, GameOverImage};
